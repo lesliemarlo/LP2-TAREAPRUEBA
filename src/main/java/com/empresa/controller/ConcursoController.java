@@ -1,6 +1,7 @@
 package com.empresa.controller;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,9 +26,9 @@ public class ConcursoController {
 	
 	@PostMapping("/registraConcurso")
 	@ResponseBody
-	public HashMap<?, ?> inserta(Concurso obj)
+	public Map<?, ?> inserta(Concurso obj)
 	{
-		HashMap<String, String> salida = new HashMap<>()	;
+		HashMap<String, String> salida = new HashMap<String, String>()	;
 		
 		Concurso objSalida = service.insertaConcurso(obj);
 		if(objSalida == null) {

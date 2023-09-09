@@ -24,13 +24,17 @@ public class Concurso {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idConcurso;
 	private String nombre;
-	private String estado;
+	
 	
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Date fechaInicio;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Temporal(TemporalType.DATE)
 	private Date fechaFin;
+	
+	private String estado;
 	
 
 }

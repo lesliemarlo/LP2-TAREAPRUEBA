@@ -74,8 +74,7 @@
 <script type="text/javascript">
 
 $("#id_registrar").click(function (){ 
-	console.log("En registrar");
-	console.log( $('#id_form').serialize());
+	
 	
 	var validator = $('#id_form').data('bootstrapValidator');
     validator.validate();
